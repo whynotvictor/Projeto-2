@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet');
+*{
+    margin:  0;
+    padding:  0;
+    box-sizing: border-box;
+    font-family: "Playwrite DK Uloopet", cursive;
+    font-optical-sizing: auto;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 15%;
+}
+.list {
+    flex:1;
+    text-align: center;
+}
+.list ul li {
+    position: inherit;
+    list-style: none;
+    padding: 8px 12px;
+    display: inline-block;
+}
+.list ul li a {
+    color:#333;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.active{
+    color: #ff0544 !important;
+}
+.text {
+    max-width: 600px;
+    padding: 20px 60px;
+}
+.text h2 {
+    font-size: 50px;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.text span {
+    color:#05fff2;
+    font-weight: 900;
+}
+.text p {
+    padding: 15px 0;
+}
+.btn {
+    padding: 15px 35px;
+    background: linear-gradient(#f701b2,#05fff2);
+    color:#fff;
+    border: 0;
+    border-radius: 20px;
+    cursor:pointer;
+    transition: 0.5s;
+}
+.btn:hover{
+    letter-spacing: 5px;
+}
+.img{
+    position: absolute;
+    right: 0;
+    top:100px;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img{
+    width: 25%;
+    margin-right: 15%;
+    margin-top: 3%;
+    animation: zoomIn 1s ease forwards,floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+}
+.circle {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f701b2,#05fff2);
+    clip-path: circle(600px at right 800px);
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-1080px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes  zoomIm {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
